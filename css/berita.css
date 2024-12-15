@@ -1,0 +1,105 @@
+/* Menggunakan struktur dan skala yang lebih konsisten */
+:root {
+  --main-color: #ff5e62;
+  --black: #222;
+  --white: #fff;
+  --light-black: #777;
+  --light-white: #fff9;
+  --dark-bg: rgba(0, 0, 0, 0.7);
+  --light-bg: #eee;
+  --border: 0.1rem solid var(--black);
+  --box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --text-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Reset styling */
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 4rem 10%; /* Sesuaikan padding agar tidak terlalu luas */
+}
+
+/* Heading */
+.heading-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 3rem; /* Sesuaikan ukuran font */
+  color: var(--black);
+}
+
+/* Container untuk berita */
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom fleksibel */
+  gap: 2rem; /* Jarak antar elemen */
+  padding: 20px;
+  max-width: 1200px; /* Batasi lebar maksimum */
+  margin: 0 auto; /* Pusatkan kontainer */
+}
+
+/* Elemen individual berita */
+.news-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  padding: 20px; /* Tambahkan ruang dalam */
+}
+
+.news-item:hover {
+  transform: scale(1.02); /* Zoom ringan saat hover */
+}
+
+/* Gambar berita */
+.news-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Judul berita */
+.news-item h2 {
+  font-size: 2rem; /* Ukuran lebih proporsional */
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Deskripsi berita */
+.news-item p {
+  margin: 10px 0;
+  font-size: 1.6rem; /* Ukuran font lebih kecil */
+  color: #555;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .heading-title {
+    font-size: 2.4rem; /* Sesuaikan heading untuk perangkat kecil */
+  }
+
+  .news-item h2 {
+    font-size: 1.8rem;
+  }
+
+  .news-item p {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,91 @@
+html {
+    font-size: 16px;
+}
+
+
+/* Penyesuaian ukuran font dan padding */
+.faq-container h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    background: var(--grey);
+    border-radius: 10px;
+    margin: auto; /* Posisi tengah secara horizontal */
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(96, 95, 95, 0.1);
+    width: 100%; /* Sesuaikan lebar */
+    max-width: 800px; /* Batasi lebar maksimum */
+    
+}
+/* Warna untuk FAQ Question tanpa shadow */
+.faq-question {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black); /* Teks putih */
+    cursor: pointer;
+    background-color: var(--grey); /* Warna merah */
+    padding: 1rem;
+    border-radius: 5px;
+    /* Menghilangkan shadow pada question */
+    box-shadow: none; 
+}
+
+/* Warna untuk FAQ Answer */
+.faq-answer {
+    font-size: 1.6rem;
+    color: var(--black); /* Teks hitam */
+    padding: 1rem;
+    display: none; /* Awalnya disembunyikan */
+    background: var(--light-white); /* Warna abu-abu */
+    border-left: 4px solid var(--main-color); /* Garis merah di sisi kiri */
+    border-radius: 5px;
+    box-shadow: none; /* Tidak ada shadow ketika tidak aktif */
+}
+
+/* Menampilkan jawaban aktif dengan shadow */
+.faq-item.active .faq-answer {
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow hanya muncul saat jawaban aktif */
+    transition: box-shadow 0.3s ease-in-out; /* Efek transisi shadow */
+}
+
+/* Hover effect untuk FAQ Question */
+.faq-question:hover {
+    background-color: #e63939; /* Warna merah lebih gelap saat hover */
+}
+
+
+/* Penyesuaian footer */
+.footer .box-container .box a {
+    font-size: 1.4rem;
+    color: var(--light-white);
+    padding-bottom: 1rem;
+    display: block;
+}
+
+.footer .credit {
+    font-size: 1.6rem;
+}
+
+/* Responsive penyesuaian */
+@media (max-width: 991px) {
+    .faq-container {
+        padding: 2rem 5%;
+    }
+
+    .faq-question {
+        font-size: 1.6rem;
+    }
+
+    .faq-answer {
+        font-size: 1.4rem;
+    }
+
+    .footer .credit {
+        font-size: 1.4rem;
+    }
+}

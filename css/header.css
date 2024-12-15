@@ -1,0 +1,86 @@
+:root {
+  --main-color: #ff4040;
+  --black: #333;
+  --white: #fff;
+  --light-white: rgba(255, 255, 255, 0.7);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+.btn {
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--main-color);
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+  }
+  
+  .heading-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    font-weight: bold;
+    justify-content: space-between;
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+  }
+  
+  .header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+  }
+  
+  .header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+    text-decoration: none; /* Pastikan tidak ada garis bawah */
+  }
+  
+  .header .navbar a:hover {
+    color: var(--main-color);
+  }
+  
+/* Gaya untuk tombol login dan logout */
+.logout-btn, .login-btn {
+  font-size: 1.7rem;
+  color: white; /* Warna teks putih */
+  background-color: var(--main-color); /* Warna utama */
+  padding: 0.8rem 2rem; /* Jarak dalam button */
+  border-radius: 5px; /* Border radius */
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 2rem;
+  display: inline-block; /* Pastikan tampil sebagai tombol */
+}
+
+.logout-btn:hover, .login-btn:hover {
+  transition: background-color 0.3s; /* Efek transisi saat hover */
+  background-color: var(--black); /* Warna berubah saat hover */
+}
