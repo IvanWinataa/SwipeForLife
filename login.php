@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     $password = $_POST['password']; // Ambil password tanpa hashing
 
     // Gunakan prepared statement untuk menghindari SQL Injection
-    $query = "SELECT * FROM tb_user WHERE email = ?";
+    $query = "SELECT * FROM tb_user WHERE email = ? AND is_deleted = 0"; // Tambahkan filter is_deleted
     $stmt = mysqli_prepare($conn, $query);
     
     if ($stmt) {
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
                 $error_message = "Email atau password salah!";
             }
         } else {
-            $error_message = "Email atau password salah!";
+            $error_message = "Email tidak ditemukan atau akun telah dinonaktifkan!";
         }
 
         mysqli_stmt_close($stmt);

@@ -51,18 +51,23 @@ $result = mysqli_query($conn, $query);
                         <span class="truncate" id="desc-<?= $row['id'] ?>">
                             <?= substr($row['deskripsi'], 0, 100) ?>...
                         </span>
-                        <button onclick="toggleDescription(<?= $row['id'] ?>)">See More</button>
+                        
                     </td>
                     <td>
                         <!-- Ikon Edit dengan Pensil -->
-                        <a href="update-donor.php?id=<?= $row['id']; ?>" title="Edit">
+                        <a href="update-berita.php?id=<?= $row['id']; ?>" title="Edit">
                             <i class="fas fa-pencil-alt"></i>
-                        </a> |
+</a>
+
 
                         <!-- Ikon Hapus dengan Tempat Sampah -->
-                        <button onclick="deleteRow(<?= $row['id'] ?>)" title="Hapus">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
+<!-- Tombol Hapus dengan Pemanggilan delete-berita.php -->
+<a href="delete-berita.php?id=<?= $row['id']; ?>" 
+   onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"
+   title="Hapus">
+    <i class="fas fa-trash-alt"></i>
+</a>
+
                     </td>
                 </tr>
             <?php } ?>

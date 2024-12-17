@@ -45,16 +45,14 @@ if (!$result) {
                     <td><?= htmlspecialchars($row['email']); ?></td>
                     <td><?= htmlspecialchars($row['role']); ?></td>
                     <td>
-    <!-- Ikon Edit dengan Pensil -->
-    <a href="update-donor.php?id=<?= $row['id']; ?>" title="Edit">
-        <i class="fas fa-pencil-alt"></i>
-    </a> |
-    
     <!-- Ikon Hapus dengan Tempat Sampah -->
-    <a href="delete.php?id=<?= $row['id']; ?>" onclick="return confirm('Yakin ingin menghapus data ini?')" title="Hapus">
+    <a href="delete-user.php?id_user=<?= $row['id_user']; ?>" 
+        onclick="return confirm('Yakin ingin menghapus data ini?')" 
+        title="Hapus">
         <i class="fas fa-trash-alt"></i>
     </a>
 </td>
+
 
                 </tr>
             <?php endwhile; ?>

@@ -1,6 +1,7 @@
 <?php
 include 'koneksi.php'; // Include file koneksi
 
+// Ambil semua data dari database
 $query = "SELECT * FROM permohonan_donor";
 $result = $conn->query($query);
 ?>
@@ -15,8 +16,8 @@ $result = $conn->query($query);
     <script>
         function deleteRow(rowId) {
             if (confirm('Yakin ingin menghapus data ini?')) {
-                const row = document.getElementById('row-' + rowId);
-                row.classList.add('hidden');
+                // Mengarahkan ke file delete-info.php untuk penghapusan data
+                window.location.href = 'delete-info.php?id=' + rowId;
             }
         }
     </script>
@@ -56,13 +57,8 @@ $result = $conn->query($query);
                     <td><?= $row['email_kontak']; ?></td>
                     <td><?= $row['dibuat_pada']; ?></td>
                     <td>
-                        <!-- Ikon Edit dengan Pensil
-                        <a href="update-donor.php?id=<?= $row['id']; ?>" title="Edit">
-                            <i class="fas fa-pencil-alt"></i>
-                        </a> | -->
-
-                        <!-- Tombol Hapus -->
-                        <button onclick="deleteRow(<?= $row['id']; ?>)" title="Terima">
+                        <!-- Tombol Hapus yang mengarahkan ke delete-info.php -->
+                        <button onclick="deleteRow(<?= $row['id']; ?>)" title="Hapus">
                             <i class="fas fa-check"></i>
                         </button>
                     </td>

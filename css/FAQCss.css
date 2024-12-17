@@ -1,91 +1,81 @@
 html {
-    font-size: 16px;
+    font-size: 14px; /* Kurangi ukuran font dasar */
+    box-sizing: border-box;
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
-/* Penyesuaian ukuran font dan padding */
+/* Perbaikan ukuran h2 dan FAQ */
 .faq-container h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Ukuran font lebih kecil */
     color: var(--main-color);
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .faq-item {
     background: var(--grey);
     border-radius: 10px;
-    margin: auto; /* Posisi tengah secara horizontal */
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(96, 95, 95, 0.1);
-    width: 100%; /* Sesuaikan lebar */
-    max-width: 800px; /* Batasi lebar maksimum */
-    
+    margin: 1rem auto; /* Tambah margin untuk jarak antar item */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(96, 95, 95, 0.1);
+    width: 90%; /* Lebar lebih kecil */
+    max-width: 600px; /* Batasi lebar maksimum */
 }
-/* Warna untuk FAQ Question tanpa shadow */
+
 .faq-question {
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* Kurangi ukuran font */
     font-weight: bold;
-    color: var(--black); /* Teks putih */
+    color: var(--black);
     cursor: pointer;
-    background-color: var(--grey); /* Warna merah */
-    padding: 1rem;
+    background-color: var(--grey);
+    padding: 0.8rem;
     border-radius: 5px;
-    /* Menghilangkan shadow pada question */
-    box-shadow: none; 
+    box-shadow: none;
+    transition: background-color 0.3s ease;
 }
 
-/* Warna untuk FAQ Answer */
 .faq-answer {
-    font-size: 1.6rem;
-    color: var(--black); /* Teks hitam */
-    padding: 1rem;
-    display: none; /* Awalnya disembunyikan */
-    background: var(--light-white); /* Warna abu-abu */
-    border-left: 4px solid var(--main-color); /* Garis merah di sisi kiri */
+    font-size: 1.2rem; /* Ukuran lebih kecil */
+    color: var(--black);
+    padding: 0.8rem;
+    display: none;
+    background: var(--light-white);
+    border-left: 3px solid var(--main-color);
     border-radius: 5px;
-    box-shadow: none; /* Tidak ada shadow ketika tidak aktif */
 }
 
-/* Menampilkan jawaban aktif dengan shadow */
 .faq-item.active .faq-answer {
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow hanya muncul saat jawaban aktif */
-    transition: box-shadow 0.3s ease-in-out; /* Efek transisi shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Hover effect untuk FAQ Question */
 .faq-question:hover {
-    background-color: #e63939; /* Warna merah lebih gelap saat hover */
-}
-
-
-/* Penyesuaian footer */
-.footer .box-container .box a {
-    font-size: 1.4rem;
-    color: var(--light-white);
-    padding-bottom: 1rem;
-    display: block;
-}
-
-.footer .credit {
-    font-size: 1.6rem;
+    background-color: #e63939;
 }
 
 /* Responsive penyesuaian */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
+    html {
+        font-size: 12px; /* Ukuran font dasar untuk layar kecil */
+    }
+
     .faq-container {
-        padding: 2rem 5%;
+        padding: 1rem;
+    }
+
+    .faq-item {
+        width: 95%;
     }
 
     .faq-question {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     .faq-answer {
-        font-size: 1.4rem;
-    }
-
-    .footer .credit {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 }

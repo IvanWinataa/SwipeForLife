@@ -1,4 +1,6 @@
-
+    <!-- header section start -->
+    <?php include 'header.php'; ?>
+<!-- header section end -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,9 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/FAQCss.css">
 
-    <!-- header section start -->
-<?php include 'header.php'; ?>
-<!-- header section end -->
+
 </head>
 
 <body>
@@ -51,9 +51,7 @@
 </div>
 
 
-    <!-- footer section start -->
-    <?php include 'footer.php'; ?>
-    <!-- footer section end -->
+
 
     <!-- Swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -61,3 +59,6 @@
 </body>
 
 </html>
+    <!-- footer section start -->
+    <?php include 'footer.php'; ?>
+    <!-- footer section end -->
